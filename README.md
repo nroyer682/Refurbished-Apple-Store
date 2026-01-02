@@ -36,7 +36,11 @@ AppleShop 3/
 ## Requirements
 
 - Java Development Kit (JDK) 8 or higher
-- JUnit for running tests
+- JUnit 4 for running tests
+  - Download from [JUnit 4](https://github.com/junit-team/junit4/wiki/Download-and-Install)
+  - Or use Maven/Gradle to manage dependencies
+- Hamcrest (required by JUnit for assertions)
+  - Usually bundled with JUnit or download from [Hamcrest](http://hamcrest.org/)
 
 ## Compilation
 
@@ -46,7 +50,7 @@ To compile the project, navigate to the `AppleShop 3` directory and use:
 javac -d bin src/model/*.java src/console_apps/*.java
 ```
 
-For compiling tests (requires JUnit):
+For compiling tests (requires JUnit and Hamcrest JAR files in the project directory):
 
 ```bash
 # On Unix/Linux/Mac:
@@ -55,6 +59,8 @@ javac -cp .:junit.jar -d bin src/model/*.java src/junit_tests/*.java
 # On Windows:
 javac -cp .;junit.jar -d bin src/model/*.java src/junit_tests/*.java
 ```
+
+**Note**: Place `junit.jar` and `hamcrest.jar` files in the `AppleShop 3` directory before compiling and running tests.
 
 ## Running the Application
 
