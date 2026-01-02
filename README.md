@@ -49,7 +49,11 @@ javac -d bin src/model/*.java src/console_apps/*.java
 For compiling tests (requires JUnit):
 
 ```bash
+# On Unix/Linux/Mac:
 javac -cp .:junit.jar -d bin src/model/*.java src/junit_tests/*.java
+
+# On Windows:
+javac -cp .;junit.jar -d bin src/model/*.java src/junit_tests/*.java
 ```
 
 ## Running the Application
@@ -69,9 +73,16 @@ To run the JUnit tests:
 
 ```bash
 cd "AppleShop 3"
+
+# On Unix/Linux/Mac:
 java -cp bin:junit.jar:hamcrest.jar org.junit.runner.JUnitCore junit_tests.TestProduct
 java -cp bin:junit.jar:hamcrest.jar org.junit.runner.JUnitCore junit_tests.TestEntry
 java -cp bin:junit.jar:hamcrest.jar org.junit.runner.JUnitCore junit_tests.TestRefurbishedStore
+
+# On Windows:
+java -cp bin;junit.jar;hamcrest.jar org.junit.runner.JUnitCore junit_tests.TestProduct
+java -cp bin;junit.jar;hamcrest.jar org.junit.runner.JUnitCore junit_tests.TestEntry
+java -cp bin;junit.jar;hamcrest.jar org.junit.runner.JUnitCore junit_tests.TestRefurbishedStore
 ```
 
 ## Usage Example
